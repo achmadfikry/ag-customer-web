@@ -1,0 +1,110 @@
+
+:root {
+  /* =========================
+     BRAND COLORS
+  ========================= */
+
+  --color-navy-950: #071A2D;
+  --color-navy-900: #102A43;
+  --color-navy-800: #183B5B;
+  --color-navy-700: #245477;
+
+  --color-blue-500: #537FCB;
+
+  --color-orange-500: #F47B45;
+  --color-orange-600: #E9652F;
+
+  --color-pink-300: #E9A6A0;
+
+  /* =========================
+     NEUTRAL COLORS
+  ========================= */
+
+  --color-white: #FFFFFF;
+
+  --color-gray-50: #F7F9FC;
+  --color-gray-100: #F1F4F8;
+  --color-gray-200: #E3E9F0;
+  --color-gray-400: #9AA9B8;
+  --color-gray-600: #526477;
+  --color-gray-800: #243648;
+
+  /* =========================
+     SEMANTIC COLORS
+  ========================= */
+
+  --color-primary: var(--color-navy-900);
+  --color-accent: var(--color-orange-500);
+  --color-background: var(--color-white);
+  --color-surface: var(--color-gray-50);
+  --color-text: #142B42;
+  --color-text-muted: #5B6D7E;
+  --color-border: var(--color-gray-200);
+
+  /* =========================
+     TYPOGRAPHY
+  ========================= */
+
+  --font-heading: 'Plus Jakarta Sans', sans-serif;
+  --font-body: 'Inter', sans-serif;
+
+  --font-xs: 0.75rem;
+  --font-sm: 0.875rem;
+  --font-base: 1rem;
+  --font-lg: 1.125rem;
+  --font-xl: 1.25rem;
+  --font-2xl: 1.5rem;
+  --font-3xl: 2rem;
+  --font-4xl: 3.5rem;
+
+  /* =========================
+     SPACING
+  ========================= */
+
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.25rem;
+  --space-6: 1.5rem;
+  --space-8: 2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+
+  --section-spacing: clamp(3.5rem, 7vw, 6.5rem);
+
+  /* =========================
+     LAYOUT
+  ========================= */
+
+  --container-width: 80rem;
+  --container-padding: clamp(1.25rem, 5.5vw, 5rem);
+
+  /* =========================
+     BORDER RADIUS
+  ========================= */
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.875rem;
+  --radius-lg: 1.25rem;
+  --radius-xl: 1.75rem;
+  --radius-full: 999px;
+
+  /* =========================
+     SHADOW
+  ========================= */
+
+  --shadow-sm: 0 4px 16px rgba(16, 42, 67, 0.06);
+  --shadow-md: 0 12px 32px rgba(16, 42, 67, 0.10);
+  --shadow-lg: 0 24px 60px rgba(7, 26, 45, 0.18);
+
+  /* =========================
+     TRANSITIONS
+  ========================= */
+
+  --transition-fast: 150ms ease;
+  --transition-normal: 220ms ease;
+  --transition-slow: 400ms ease;
+}
