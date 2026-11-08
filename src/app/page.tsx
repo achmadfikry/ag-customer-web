@@ -1,69 +1,67 @@
-import Image from "next/image";
 import styles from "./page.module.css";
+
+const navigation = [
+  { label: "Tentang", href: "#about" },
+  { label: "Layanan", href: "#services" },
+  { label: "Portfolio", href: "#portfolio" },
+  { label: "Berita", href: "#news" },
+];
 
 export default function Home() {
   return (
-    <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className={styles.intro}>
-          <h1>
-            To get started, edit the{" "}
-            <code className={styles.code}>page.tsx</code> file.
-          </h1>
-          <p>
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={14}
-            />
-            Deploy Now
+    <>
+      <header className={styles.header}>
+        <nav className={styles.nav} aria-label="Navigasi utama">
+          <a className={styles.brand} href="#home" aria-label="Antariksa Grup, beranda">
+            <span className={styles.brandMark} aria-hidden="true">
+              A
+            </span>
+            <span className={styles.brandName}>
+              ANTARIKSA
+              <br />
+              GRUP
+            </span>
           </a>
-          <a
-            className={styles.secondary}
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
+
+          <div className={styles.navLinks}>
+            {navigation.map((item) => (
+              <a key={item.href} href={item.href}>
+                {item.label}
+              </a>
+            ))}
+          </div>
+
+          <a className={styles.contactLink} href="mailto:halo@antariksagrup.com">
+            Hubungi Kami <span aria-hidden="true">→</span>
           </a>
-        </div>
+        </nav>
+      </header>
+
+      <main>
+        <section className={styles.hero} id="home" aria-labelledby="hero-title">
+          <div className={styles.heroImage} role="img" aria-label="Suasana konser dengan panggung dan penonton" />
+          <div className={styles.heroContent}>
+            <p className={styles.eyebrow}>Event Management &amp; Creative Agency</p>
+            <h1 className={styles.heroTitle} id="hero-title">
+              We Create Experiences.
+              <br />
+              We Make Moments <span>Matter.</span>
+            </h1>
+            <p className={styles.heroDescription}>
+              Antariksa Grup menghadirkan solusi event yang kreatif, inovatif,
+              dan berdampak untuk setiap momen spesial.
+            </p>
+            <div className={styles.heroActions}>
+              <a className={styles.primaryButton} href="#portfolio">
+                Lihat Karya Kami <span aria-hidden="true">→</span>
+              </a>
+              <a className={styles.secondaryButton} href="#about">
+                Tentang Kami
+              </a>
+            </div>
+          </div>
+        </section>
       </main>
-    </div>
+    </>
   );
 }
