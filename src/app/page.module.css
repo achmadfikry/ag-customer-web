@@ -1,9 +1,9 @@
 .header {
-  position: relative;
+  position: absolute;
   z-index: 1;
+  inset: 0 0 auto;
   height: 5rem;
-  border-bottom: 1px solid rgba(227, 233, 240, 0.8);
-  background: rgba(255, 255, 255, 0.94);
+  background: transparent;
 }
 
 .nav {
@@ -103,7 +103,7 @@
 .hero {
   position: relative;
   display: flex;
-  min-height: min(43rem, calc(100svh - 5rem));
+  min-height: min(43rem, 100svh);
   align-items: center;
   overflow: hidden;
   isolation: isolate;
@@ -238,7 +238,7 @@
   }
 
   .heroContent {
-    padding-block: 3.5rem 15rem;
+    padding-block: 7.5rem 15rem;
   }
 
   .heroTitle {
