@@ -86,10 +86,18 @@
   background: var(--color-orange-500);
 }
 
+.contactLink {
+  background: var(--color-navy-950);
+}
+
 .contactLink:hover,
 .primaryButton:hover {
   transform: translateY(-2px);
   background: var(--color-orange-600);
+}
+
+.contactLink:hover {
+  background: var(--color-navy-800);
 }
 
 .hero {
