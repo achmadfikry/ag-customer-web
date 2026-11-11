@@ -1,3 +1,4 @@
+import { CalendarDays, Star, UsersRound } from "lucide-react";
 import styles from "./page.module.css";
 
 const navigation = [
@@ -5,6 +6,12 @@ const navigation = [
   { label: "Layanan", href: "#services" },
   { label: "Portfolio", href: "#portfolio" },
   { label: "Berita", href: "#news" },
+];
+
+const sampleStats = [
+  { value: "8+", label: "Tahun pengalaman", Icon: CalendarDays },
+  { value: "35+", label: "Klien & partner", Icon: UsersRound },
+  { value: "120+", label: "Event terlaksana", Icon: Star },
 ];
 
 export default function Home() {
@@ -58,6 +65,44 @@ export default function Home() {
               <a className={styles.secondaryButton} href="#about">
                 Tentang Kami
               </a>
+            </div>
+          </div>
+        </section>
+
+        <section className={styles.aboutSection} id="about" aria-labelledby="about-title">
+          <div className={styles.aboutGrid}>
+            <div
+              className={styles.aboutImage}
+              role="img"
+              aria-label="Suasana pengunjung menikmati acara outdoor"
+            />
+
+            <div className={styles.aboutCopy}>
+              <p className={styles.sectionEyebrow}>Tentang Antariksa Grup</p>
+              <h2 className={styles.sectionTitle} id="about-title">
+                Bringing Ideas Into Real Experiences
+              </h2>
+              <p className={styles.aboutDescription}>
+                Kami membantu mewujudkan ide menjadi pengalaman acara yang
+                berkesan—mulai dari perencanaan hingga setiap detail di hari
+                pelaksanaan.
+              </p>
+              <a className={styles.learnMore} href="#services">
+                Kenali layanan kami <span aria-hidden="true">→</span>
+              </a>
+            </div>
+
+            <div className={styles.stats} aria-label="Contoh statistik perusahaan">
+              <p className={styles.sampleNotice}>Angka contoh sementara</p>
+              {sampleStats.map(({ value, label, Icon }) => (
+                <div className={styles.stat} key={label}>
+                  <Icon className={styles.statIcon} aria-hidden="true" />
+                  <div>
+                    <strong className={styles.statValue}>{value}</strong>
+                    <span className={styles.statLabel}>{label}</span>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </section>
