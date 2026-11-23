@@ -1,4 +1,13 @@
-import { CalendarDays, Star, UsersRound } from "lucide-react";
+import {
+  CalendarDays,
+  Clapperboard,
+  Megaphone,
+  PartyPopper,
+  PanelsTopLeft,
+  Star,
+  Tags,
+  UsersRound,
+} from "lucide-react";
 import styles from "./page.module.css";
 
 const navigation = [
@@ -12,6 +21,39 @@ const sampleStats = [
   { value: "8+", label: "Tahun pengalaman", Icon: CalendarDays },
   { value: "35+", label: "Klien & partner", Icon: UsersRound },
   { value: "120+", label: "Event terlaksana", Icon: Star },
+];
+
+const sampleServices = [
+  {
+    title: "Event Management",
+    description: "Perencanaan dan pelaksanaan acara dari awal hingga selesai.",
+    Icon: CalendarDays,
+  },
+  {
+    title: "Brand Activation",
+    description: "Aktivasi kreatif untuk mendekatkan brand dengan audiens.",
+    Icon: Megaphone,
+  },
+  {
+    title: "Exhibition & Booth",
+    description: "Konsep dan produksi area pameran yang menarik perhatian.",
+    Icon: PanelsTopLeft,
+  },
+  {
+    title: "Festival & Bazaar",
+    description: "Pengalaman festival dan bazaar yang seru dan tertata.",
+    Icon: PartyPopper,
+  },
+  {
+    title: "Promotional Campaign",
+    description: "Kampanye promosi untuk memperkuat interaksi dengan brand.",
+    Icon: Tags,
+  },
+  {
+    title: "Event Production",
+    description: "Dukungan produksi teknis untuk acara yang berjalan lancar.",
+    Icon: Clapperboard,
+  },
 ];
 
 export default function Home() {
@@ -104,6 +146,34 @@ export default function Home() {
                 </div>
               ))}
             </div>
+          </div>
+        </section>
+
+        <section
+          className={styles.servicesSection}
+          id="services"
+          aria-labelledby="services-title">
+          <div className={styles.servicesContainer}>
+            <p className={styles.sectionEyebrow}>Layanan Kami</p>
+            <h2 className={styles.sectionTitle} id="services-title">
+              Solusi Event yang Menyeluruh
+            </h2>
+            <p className={styles.servicesDescription}>
+              Dari ide hingga eksekusi, kami membantu menciptakan pengalaman yang sesuai dengan kebutuhan acara dan brand Anda.
+            </p>
+
+            <div className={styles.serviceGrid}>
+              {sampleServices.map(({ title, description, Icon }) => (
+                <article className={styles.serviceCard} key={title}>
+                  <Icon className={styles.serviceIcon} aria-hidden="true" />
+                  <h3 className={styles.serviceTitle}>{title}</h3>
+                  <p className={styles.serviceDescription}>{description}</p>
+                </article>
+              ))}
+            </div>
+            <p className={styles.sampleNotice}>
+              Kategori dan deskripsi layanan ini masih contoh.
+            </p>
           </div>
         </section>
       </main>
