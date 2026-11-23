@@ -73,7 +73,7 @@
   --space-16: 4rem;
   --space-20: 5rem;
 
-  --section-spacing: clamp(3.5rem, 7vw, 6.5rem);
+  --section-spacing: clamp(2rem, 4vw, 3.5rem);
 
   /* =========================
      LAYOUT

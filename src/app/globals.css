@@ -117,7 +117,7 @@ p {
 
 @media (max-width: 640px) {
   :root {
-    --section-spacing: 3.25rem;
+    --section-spacing: 2rem;
     --container-padding: 1.25rem;
   }
 }
